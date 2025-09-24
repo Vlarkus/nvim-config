@@ -59,34 +59,3 @@ keymap("n", "<leader>e",  "<cmd>Neotree reveal right source=filesystem<CR>", { d
 keymap("n", "<leader>ef", "<cmd>Neotree reveal right source=filesystem<CR>", { desc = "Neo-tree: Files (right)" })
 keymap("n", "<leader>eg", "<cmd>Neotree reveal right source=git_status<CR>", { desc = "Neo-tree: Git status (right)" })
 keymap("n", "<leader>eb", "<cmd>Neotree reveal right source=buffers<CR>",    { desc = "Neo-tree: Buffers (right)" })
-
-require("neo-tree").setup({
-  window = {
-    mappings = {
-      -- open files or expand folder with l
-      ["l"] = "open",
-      -- close folder with h
-      ["h"] = "close_node",
-      -- optional: go up to parent with H (capital H)
-      ["H"] = "navigate_up",
-      -- you can disable <CR> if you don’t want Enter to open
-      ["<cr>"] = "noop",
-    },
-  },
-})
-
-require("neo-tree").setup({
-  window = {
-    mappings = {
-      -- open files or expand folder with l
-      ["l"] = "open",
-      -- close folder with h
-      ["h"] = "close_node",
-      -- optional: go up to parent with H (capital H)
-      ["H"] = "navigate_up",
-      -- you can disable <CR> if you don’t want Enter to open
-      ["<cr>"] = "noop",
-    },
-  },
-})
-
