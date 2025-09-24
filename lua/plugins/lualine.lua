@@ -13,7 +13,13 @@ return {
         lualine_a = { "mode" },           -- leftmost
         lualine_b = { "filename" },       -- after mode
         lualine_c = { "branch" },         -- after filename
-        lualine_x = {},                   -- empty (keeps balance)
+        lualine_x = {
+          {
+            "diff",
+            -- symbols = { added = " ", modified = " ", removed = " " },
+          },
+        },
+
         lualine_y = { "diagnostics" },    -- second from right
         lualine_z = { "location" },
       },
@@ -21,4 +27,3 @@ return {
     })
   end,
 }
-

@@ -30,8 +30,13 @@ keymap("n", "<leader>vc", function()
   })
 end, { desc = "Open Neovim config files" })
 
+
+keymap("n", "<leader>tp", "<cmd>TypstPreviewToggle<CR>", { desc = "Typst: toggle live preview" })
+
 keymap("n", "<leader>/", "gcc", { remap = true, desc = "Toggle comment line" })
 keymap("v", "<leader>/", "gc",  { remap = true, desc = "Toggle comment block" })
+
+keymap("n", "<leader>wp", "<cmd>setlocal wrap!<cr>", { desc = "Toggle wrap (buffer-local)" })
 
 keymap("n", "<leader>tt", "<cmd>ToggleTerm direction=float<cr>", { desc = "Toggle floating terminal" })
 keymap("n", "<leader>th", "<cmd>ToggleTerm size=15 direction=horizontal<cr>", { desc = "Toggle horizontal terminal" })
@@ -49,4 +54,39 @@ keymap("n", "<leader>ww", ":w<CR>", opts)
 keymap("n", "<leader>wq", ":wq<CR>", opts)
 keymap("n", "<leader>qq", ":q!<CR>", opts)
 keymap("n", "<leader>so", ":source %<CR>", opts)
-keymap("n", "<leader>e", ":Ex<CR>", opts)
+
+keymap("n", "<leader>e",  "<cmd>Neotree reveal right source=filesystem<CR>", { desc = "Neo-tree: Files (right)" })
+keymap("n", "<leader>ef", "<cmd>Neotree reveal right source=filesystem<CR>", { desc = "Neo-tree: Files (right)" })
+keymap("n", "<leader>eg", "<cmd>Neotree reveal right source=git_status<CR>", { desc = "Neo-tree: Git status (right)" })
+keymap("n", "<leader>eb", "<cmd>Neotree reveal right source=buffers<CR>",    { desc = "Neo-tree: Buffers (right)" })
+
+require("neo-tree").setup({
+  window = {
+    mappings = {
+      -- open files or expand folder with l
+      ["l"] = "open",
+      -- close folder with h
+      ["h"] = "close_node",
+      -- optional: go up to parent with H (capital H)
+      ["H"] = "navigate_up",
+      -- you can disable <CR> if you don’t want Enter to open
+      ["<cr>"] = "noop",
+    },
+  },
+})
+
+require("neo-tree").setup({
+  window = {
+    mappings = {
+      -- open files or expand folder with l
+      ["l"] = "open",
+      -- close folder with h
+      ["h"] = "close_node",
+      -- optional: go up to parent with H (capital H)
+      ["H"] = "navigate_up",
+      -- you can disable <CR> if you don’t want Enter to open
+      ["<cr>"] = "noop",
+    },
+  },
+})
+
