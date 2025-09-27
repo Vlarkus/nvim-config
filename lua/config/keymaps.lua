@@ -43,6 +43,7 @@ keymap("n", "<leader>th", "<cmd>ToggleTerm size=15 direction=horizontal<cr>", { 
 keymap("n", "<leader>tv", "<cmd>ToggleTerm size=50 direction=vertical<cr>", { desc = "Toggle vertical terminal" })
 
 keymap("n", "<leader>ff", "<cmd>Telescope find_files<CR>", { desc = "Find files" })
+keymap("n", "<leader>ft", "<cmd>Telescope colorscheme<CR>", { desc = "Find files" })
 keymap("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", { desc = "Live grep" })
 keymap("n", "<leader>fb", "<cmd>Telescope buffers<CR>", { desc = "Find buffers" })
 keymap("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", { desc = "Help tags" })
